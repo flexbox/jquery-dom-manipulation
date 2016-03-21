@@ -46,7 +46,7 @@ for (var i =0;i<team_count;i++){
 
    $("#results").css({
    "transform": "translate(0px,20px)",
-   "transition": "transform 500ms"
+   "transition": "transform 200ms"
    })
   
 
