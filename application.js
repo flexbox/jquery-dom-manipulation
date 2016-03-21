@@ -8,23 +8,25 @@
 function runChallenges() {
 
   // Ex 1. Read the content of the email input
-  var email = null;  // TODO: replace null, keep the email variable.
+  var email = document.getElementById('email').value;  // TODO: replace null, keep the email variable.
 
 
   // Ex 2. Fill the content of the email input with your email
+  document.getElementById('email').value = "verges.rudy@gmail.com";
 
 
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
   //       The text should be emphasized using a <strong> tag
-
+  document.getElementById('email-hint').innerHTML = "<strong>This is my email now</strong>";
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
+  $('th').addClass('blue');
 
 
 
   // Ex 5. Count the number of table body rows there are (team count!)
-  var team_count = 0;  // TODO: replace 0, keep the team_count variable.
+  var team_count = $('tbody tr').length;  // TODO: replace 0, keep the team_count variable.
 
 
 
