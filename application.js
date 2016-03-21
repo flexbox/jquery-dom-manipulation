@@ -31,6 +31,19 @@ function runChallenges() {
 
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
+  var table = $('table')[0];
+  var newRow   = table.insertRow(15);
+  var newCell  = newRow.insertCell(0);
+  var newText  = document.createTextNode('15');
+  newCell.appendChild(newText);
+
+  newCell  = newRow.insertCell(1);
+  newText  = document.createTextNode('Nouvelle équipe de dingue');
+  newCell.appendChild(newText);
+
+  newCell  = newRow.insertCell(2);
+  newText  = document.createTextNode('0');
+  newCell.appendChild(newText);
 
 
   // Ex 7. Write some code to sum all points given to all teams
@@ -41,9 +54,6 @@ function runChallenges() {
     var number = parseInt(liste[i].lastChild.innerHTML);
     sum = sum + number;
   }
-    // TODO: replace 0 with your sum result, keep the sum variable.
-    //gets table
-
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
@@ -53,13 +63,11 @@ function runChallenges() {
   }
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
+  $('#results')[0].style.transform = "translateY(20px)";
 
 
   // Ex 10. Remove the "Email:" label from the DOM
   $('label').remove();
-
-
-
 
 
 
