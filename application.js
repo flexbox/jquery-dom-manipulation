@@ -33,6 +33,12 @@ function runChallenges() {
 
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
+ /* for(var i=0, i<team_count, i++){
+    sum += ($('td:last-child')[i].innerHTML);
+  }*/
+  for(var i=0; i<team_count; i++){
+    sum += parseInt($('td:last-child')[i].innerHTML);
+  }
 
 
 
