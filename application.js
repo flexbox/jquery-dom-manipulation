@@ -27,27 +27,33 @@ function runChallenges() {
   var team_count = $('tbody tr').length;  // TODO: replace 0, keep the team_count variable.
 
 
-
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
   $('tbody').append('<tr><td>15</td><td>Mon équipe </td><td>0</td></tr>');
 
 
   // Ex 7. Write some code to sum all points given to all teams
-  var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
+  var sum = calcul();  // TODO: replace 0 with your sum result, keep the sum variable.
 
+  function calcul(){
+    var i = 0; var value = 0;
 
+    for(i; i<team_count; i++){
+      value += parseInt($('td:last-child')[i].innerHTML);
+    }
+    return value;
+  }
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
-
+  $('th').attr('style', 'background-color:#DDF4FF;');
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
 
-
+  
 
   // Ex 10. Remove the "Email:" label from the DOM
-
+  $('label').remove();
 
 
 
