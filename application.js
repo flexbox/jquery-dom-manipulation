@@ -24,8 +24,12 @@ function runChallenges() {
 
 
   // Ex 5. Count the number of table body rows there are (team count!)
-  var team_count = $('tbody > tr').length;  // TODO: replace 0, keep the team_count variable.
-
+  //var team_count = $('tbody > tr').length;  // TODO: replace 0, keep the team_count variable.
+    var compt=0;
+    for(var i=0;i<$('tbody > tr').length;i++){
+        compt=compt+1;
+    }
+    var team_count=compt;
 
 
   // Ex 6. Say there is a 15th team added to the table.
@@ -35,7 +39,6 @@ function runChallenges() {
 
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
-
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
