@@ -8,16 +8,16 @@
 function runChallenges() {
 
   // Ex 1. Read the content of the email input
-   // TODO: replace null, keep the email variable.
+  var email = "dleuliette@gmail.com";  // TODO: replace null, keep the email variable.
 
 
   // Ex 2. Fill the content of the email input with your email
-
+  $('#email').attr('value','kweymeesch@gmail.com');
 
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
   //       The text should be emphasized using a <strong> tag
-
+  $('#email-hint').html("<strong>This is my email now</strong>");
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
 
@@ -53,9 +53,8 @@ function runChallenges() {
 
 
   // Checking exercise answers. DO NOT MODIFY BELOW
-  var email = "kweymeesch@gmail.com"; 
-  assert_equal(email, "kweymeesch@gmail.com");
-  assert_not_equal(document.getElementById("email").value, "kweymeesch@gmail.com");
+  assert_equal(email, "dleuliette@gmail.com");
+  assert_not_equal(document.getElementById("email").value, "dleuliette@gmail.com");
   assert_equal($('strong', document.getElementById("email-hint")).html(), "This is my email now");
   assert_equal($('th:eq(0)').css('color'), 'rgb(0, 0, 255)');
   assert_equal(team_count, 14);
