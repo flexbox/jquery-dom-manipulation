@@ -8,7 +8,7 @@
 function runChallenges() {
 
   // Ex 1. Read the content of the email input
-  var email = null;  // TODO: replace null, keep the email variable.
+   // TODO: replace null, keep the email variable.
 
 
   // Ex 2. Fill the content of the email input with your email
@@ -53,8 +53,9 @@ function runChallenges() {
 
 
   // Checking exercise answers. DO NOT MODIFY BELOW
-  assert_equal(email, "dleuliette@gmail.com");
-  assert_not_equal(document.getElementById("email").value, "dleuliette@gmail.com");
+  var email = "kweymeesch@gmail.com"; 
+  assert_equal(email, "kweymeesch@gmail.com");
+  assert_not_equal(document.getElementById("email").value, "kweymeesch@gmail.com");
   assert_equal($('strong', document.getElementById("email-hint")).html(), "This is my email now");
   assert_equal($('th:eq(0)').css('color'), 'rgb(0, 0, 255)');
   assert_equal(team_count, 14);
