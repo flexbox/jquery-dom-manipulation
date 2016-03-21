@@ -55,7 +55,7 @@ function runChallenges() {
 
 
   // Ex 10. Remove the "Email:" label from the DOM
-
+  $('label').remove();
 
 
 
