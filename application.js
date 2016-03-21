@@ -29,8 +29,7 @@ function runChallenges() {
 
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
-
-
+ $('.table tbody:last').append("<tr><td>15</td><td>Fuck dat</td><td>0</td></tr>")
 
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
