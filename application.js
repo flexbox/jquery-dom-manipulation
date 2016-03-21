@@ -40,14 +40,19 @@ for (var i =0;i<team_count;i++){
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
 
-
+  $('th').attr('style', 'background-color:#DDF4FF;');
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
 
-
+   $("#results").css({
+   "transform": "translate(0px,20px)",
+   "transition": "transform 500ms"
+   })
+  
 
   // Ex 10. Remove the "Email:" label from the DOM
 
+  $ ('label').remove();
 
 
 
