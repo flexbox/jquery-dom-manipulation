@@ -16,7 +16,7 @@ function runChallenges() {
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
   //       The text should be emphasized using a <strong> tag
-  document.getElementById("email-hint").innerHTML = "This is my email now";
+  $('#email-hint').text("This is my email now");
 
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
@@ -26,20 +26,20 @@ function runChallenges() {
   var team_count = $('.table > tbody > tr').length;  // TODO: replace 0, keep the team_count variable.
 
 
-
-
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
-
+  $('.table > tbody').append('<tr><td>'+(team_count+1)+'</td><td>Nouvelle Team</td><td>0</td></tr>');
 
 
   // Ex 7. Write some code to sum all points given to all teams
-  var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
-
+  for(var i=0; i<team_count; i++){
+    
+    var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
+  } 
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
-
+  $('th').css("background-color", "#DDF4FF");
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
@@ -47,7 +47,7 @@ function runChallenges() {
 
 
   // Ex 10. Remove the "Email:" label from the DOM
-
+  $("label").remove();
 
 
 
