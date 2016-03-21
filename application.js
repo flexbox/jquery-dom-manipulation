@@ -33,25 +33,31 @@ function runChallenges() {
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
 
-  $("table tr").
+  $("table tr:last").after("<tr> <td> 15 </td> <td> Sami Team </td> <td> 0 </td> </tr>");
 
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
 
-
+  var rows = $('table tr td:last-child');
+  for (var i=0;i<team_count;i++){
+	sum += parseInt(rows[i].innerHTML);
+  }
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
 
-
+  $("th").css("background-color", "#DDF4FF");
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
 
-
+  $("#results").css({
+  "transform": "translate(0px,20px)",
+  "transition": "transform 500ms"
+	})
 
   // Ex 10. Remove the "Email:" label from the DOM
 
 
-
+  $("div label").remove();
 
 
   // Checking exercise answers. DO NOT MODIFY BELOW
