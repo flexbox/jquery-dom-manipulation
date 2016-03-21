@@ -42,6 +42,8 @@ function runChallenges() {
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
 
+  
+  $('th').css('background-color', '#DDF4FF');
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
