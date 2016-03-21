@@ -35,20 +35,16 @@ function runChallenges() {
 
 
   // Ex 7. Write some code to sum all points given to all teams
-  var sum = sum();  // TODO: replace 0 with your sum result, keep the sum variable.
+  var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
 
-  function sum(){
-    var i=0; var val =0;
-
-    for (i;i<team_count;i++){
-      val += parseInt($('td:last-child')[i].innerHTML);
+    for (var i=0;i<team_count;i++){
+      sum += parseInt($('td:last-child')[i].innerHTML);
     }
-    return val;
-  }
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
 
+  $('th').css('background-color','#DDF4FF');
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
