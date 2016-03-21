@@ -21,7 +21,7 @@ function runChallenges() {
   $('#email-hint').html("<strong>This is my email now</strong>");
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
-
+  $('th').addClass('blue');
 
 
   // Ex 5. Count the number of table body rows there are (team count!)
