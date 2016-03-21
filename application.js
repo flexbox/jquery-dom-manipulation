@@ -16,10 +16,7 @@ function runChallenges() {
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
   //       The text should be emphasized using a <strong> tag
-  document.getElementById("email-hint").innerHTML = "This is my email now";
-  $('email-hint').html('<strong> This is my email now </strong>');
-  //$("strong").text(email-hint);
-
+  $('#email-hint').html('<strong>This is my email now</strong>');
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
   $("th").addClass("blue");
@@ -44,7 +41,7 @@ function runChallenges() {
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
-
+  $("#results").css("margin-top", "-20px");
 
 
   // Ex 10. Remove the "Email:" label from the DOM
