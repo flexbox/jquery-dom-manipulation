@@ -23,8 +23,8 @@ function runChallenges() {
 
 
   // Ex 5. Count the number of table body rows there are (team count!)
-  var team_count = 0;  // TODO: replace 0, keep the team_count variable.
-
+  // TODO: replace 0, keep the team_count variable.
+  var team_count = $('tbody tr').length;
 
 
   // Ex 6. Say there is a 15th team added to the table.
