@@ -49,12 +49,14 @@ function runChallenges() {
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
-
+   $("#results").css({
+   "transform": "translate(0px,20px)",
+   "transition": "transform 500ms"
+   })
   
 
   // Ex 10. Remove the "Email:" label from the DOM
   $('label').remove();
-
 
 
 
