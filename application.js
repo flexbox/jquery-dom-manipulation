@@ -34,6 +34,8 @@ function runChallenges() {
 
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
+    var numero=($('tbody > tr').length)+1;
+    $('tbody').prepend("<tr><td>"+numero+"</td><td>Nouvelle équipe </td><td>0</td></tr>");
 
 
 
