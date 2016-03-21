@@ -12,6 +12,7 @@ function runChallenges() {
 
 
   // Ex 2. Fill the content of the email input with your email
+  $('#email').val("menard.ludovic@outlook.fr");
 
 
 
