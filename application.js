@@ -12,6 +12,7 @@ function runChallenges() {
 
 
   // Ex 2. Fill the content of the email input with your email
+    $("#email").val("elodieandrieux62100@gmail.com");
 
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
