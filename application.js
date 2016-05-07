@@ -17,7 +17,9 @@ function runChallenges() {
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
   //       The text should be emphasized using a <strong> tag
-
+  var emailHint = $('#email-hint');
+  var text = $('<strong>').text("This is my email now");
+  text.appendTo(emailHint);
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
 
