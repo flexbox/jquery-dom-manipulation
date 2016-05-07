@@ -39,7 +39,11 @@ function runChallenges() {
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
 
-
+   var liste = $('tbody > tr');
+   for (var i = liste.length - 1; i >= 0; i--) {
+    var number = parseInt(liste[i].lastChild.innerHTML);
+    sum = sum + number;
+   }
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
 
