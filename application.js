@@ -33,13 +33,15 @@ function runChallenges() {
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
   team_count++;
-  var newteam = "<tr><td>" + team_count + "</td><td>The 15th team</td><td>0</td></tr>"
+  var newteam = "<tr><td>" + team_count + "</td><td>The 15th team</td><td>" + 0 + "</td></tr>"
   $("table").append(newteam);
 
 
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
-
+  $("table>tbody>tr").each(function(){
+    sum = sum + parseInt($(this).closest('tr').find('td:eq(2)').text());
+  });
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
