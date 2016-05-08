@@ -8,51 +8,65 @@
 function runChallenges() {
 
   // Ex 1. Read the content of the email input
-  var email = null;  // TODO: replace null, keep the email variable.
-
+  var email = $("#email").val();  // TODO: replace null, keep the email variable.
 
   // Ex 2. Fill the content of the email input with your email
-
+  email = $('#email').val('pe.petiterwan@gmail.com');
 
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
   //       The text should be emphasized using a <strong> tag
+  $("#email-hint").html("<strong> This is my email now </strong>");
 
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
-
+  $("th").addClass("blue")
 
 
   // Ex 5. Count the number of table body rows there are (team count!)
   var team_count = 0;  // TODO: replace 0, keep the team_count variable.
-
+  $('tbody>tr').each(function(){
+    team_count = team_count+1;
+  });
 
 
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
-
+  team_count++;
+  var newteam = "<tr><td>" + team_count + "</td><td>The 15th team</td><td>" + 0 + "</td></tr>"
+  $("table").append(newteam);
 
 
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
-
+  $("table>tbody>tr").each(function(){
+    sum = sum + parseInt($(this).closest('tr').find('td:eq(2)').text());
+  });
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
-
+  $("table>thead>tr>th").each(function(){
+    $(this).css("background-color","#DDF4FF")
+  });
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
-
-
+  $("#results").animate({
+    opacity: 1,
+    top:"+=20",
+  });
 
   // Ex 10. Remove the "Email:" label from the DOM
+  $("label").each(function(){
+    if($(this).attr("for","email")){
+      $(this).remove();
+    }
+  });
 
 
 
 
-
-  // Checking exercise answers. DO NOT MODIFY BELOW
+ // Checking exercise answers. DO NOT MODIFY BELOW
   assert_equal(email, "dleuliette@gmail.com");
   assert_not_equal(document.getElementById("email").value, "dleuliette@gmail.com");
   assert_equal($('strong', document.getElementById("email-hint")).html(), "This is my email now");
