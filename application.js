@@ -57,7 +57,11 @@ function runChallenges() {
   });
 
   // Ex 10. Remove the "Email:" label from the DOM
-
+  $("label").each(function(){
+    if($(this).attr("for","email")){
+      $(this).remove();
+    }
+  });
 
 
 
