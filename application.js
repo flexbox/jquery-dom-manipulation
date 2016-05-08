@@ -51,8 +51,10 @@ function runChallenges() {
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
-
-
+  $("#results").animate({
+    opacity: 1,
+    top:"+=20",
+  });
 
   // Ex 10. Remove the "Email:" label from the DOM
 
